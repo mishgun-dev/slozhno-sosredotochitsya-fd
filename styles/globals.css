@@ -7,6 +7,9 @@
 }
 
 body {
+  font-family: var(--font);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
   min-inline-size: 375px;
   max-inline-size: 1440px;
   margin: 0 auto;

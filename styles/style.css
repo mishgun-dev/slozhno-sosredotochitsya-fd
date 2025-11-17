@@ -1,5 +1,210 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  color: var(--main-text-color);
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: var(--bg-color);
+}
+
+/* Шапка */
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr auto;
+  align-items: center;
+  padding: var(--main-padding);
+  margin-block-end: var(--main-margin);
+}
+
+.decorated-zone {
+  block-size: 100vb;
+  min-block-size: 668px;
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: var(--main-padding);
+  inset-block-end: var(--main-padding);
+  inline-size: 25px;
+  block-size: 25px;
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color)
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  inset-inline-end: var(--main-padding);
+  inset-block-start: var(--main-padding);
+  inline-size: 25px;
+  block-size: 25px;
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color)
+}
+
+.header__theme-menu {
+  justify-self: end
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  color: var(--button-color);
+  text-transform: lowercase;
+  background: transparent;
+  border: none;
+  padding: 1.5px 13px;
+  cursor: pointer;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--button-color);
+}
+
+.header__title {
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+/* Общие стили для шапки и футера */
+.title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+  color: var(--header-text-color);
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+.header__subtitle {
+  color: var(--subtitle-color);
+  font-weight: var(--font-weight-bold);
+}
+
+.header__rec {
+  color: var(--accent-color);
+  position: absolute;
+  visibility: var(--visible);
+  text-transform: uppercase;
+  inset-block-start: 11px;
+  inset-inline-end: 38px;
+}
+
+.header__rec::after {
+  content: '';
+  position: absolute;
+  visibility: var(--visible);
+  block-size: 9px;
+  inline-size: 9px;
+  border: 1px solid var(--accent-color);
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  inset-block-start: 7px;
+  inset-inline-end: -19px;
+
+}
+
+.title-decor {
+  background-color: var(--bg-text-color);
+}
+
+/* Контент */
+
+.main {
+  padding-inline: var(--main-padding);
+}
+
+/* Общие стили для секций */
+
+.section {
+  display: grid;
+  grid-auto-flow: row;
+  gap: var(--card-gap);
+  margin-block-end: var(--section-margin);
+}
+
+.section__title {
+  font-size: inherit;
+  color: var(--section-title-color);
+}
+.section__list {
+  display: grid;
+  gap: var(--card-gap);
+}
+.reasons__list-item {
+
+}
+.card {
+  display: grid;
+  gap: var(--header-card-gap);
+}
+.card__title {
+  color: var(--subtitle-color);
+  font-size: inherit;
+}
+.card__text {
+
+}
+
+.card__link {
+  text-decoration: none;
+  text-shadow: 2px 2px var(--accent-color);
+}
+
+.recommendations__subtitle {
+  color: var(--subtitle-color);
+  font-size: inherit;
+}
+
+/* Начертание текста в секции "Как концентрироваться лучше..." */
+
+.title-weight {
+  font-weight: var(--font-weight-normal);
+}
+
+/* Секция с картинками */
+
+.gallery {
+  gap: var(--header-card-gap);
+  margin-block-end: var(--main-margin);
+}
+
+.gallery__title {
+  color: var(--subtitle-color);
+  font-size: inherit;
+}
+
+.gallery__image {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* Футер */
+
+.footer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__title {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+/* Медиазапросы */
+
+@media (width >= 768px) {
+  
 }
