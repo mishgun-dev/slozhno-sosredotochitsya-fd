@@ -1,55 +1,55 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+/* Основные стили проекта. */
 
 .page {
   color: var(--main-text-color);
+  background-color: var(--bg-color);
   background-image: var(--bg-image);
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: var(--bg-color);
 }
 
 /* Шапка */
-
 .header {
   display: grid;
   grid-template-rows: 1fr min-content 1fr auto;
   align-items: center;
-  padding: var(--main-padding);
   margin-block-end: var(--main-margin);
+  padding: var(--main-padding);
 }
 
+/* Декоративные элементы */
 .decorated-zone {
+  position: relative;
   block-size: 100vb;
   min-block-size: 668px;
-  position: relative;
 }
 
 .decorated-zone::before {
-  content: '';
+  content: "";
   position: absolute;
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
   inset-inline-start: var(--main-padding);
   inset-block-end: var(--main-padding);
   inline-size: 25px;
   block-size: 25px;
-  border-block-end: 1px solid var(--accent-color);
-  border-inline-start: 1px solid var(--accent-color)
 }
 
 .decorated-zone::after {
-  content: '';
+  content: "";
   position: absolute;
+  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--accent-color);
   inset-inline-end: var(--main-padding);
   inset-block-start: var(--main-padding);
   inline-size: 25px;
   block-size: 25px;
-  border-block-start: 1px solid var(--accent-color);
-  border-inline-end: 1px solid var(--accent-color)
 }
 
 .header__theme-menu {
-  justify-self: end
+  justify-self: end;
 }
 
 .header__theme-menu-list {
@@ -59,16 +59,17 @@
 }
 
 .header__theme-menu-button {
+  border: none;
+  padding: 1.5px 13px;
   color: var(--button-color);
   text-transform: lowercase;
   background: transparent;
-  border: none;
-  padding: 1.5px 13px;
   cursor: pointer;
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--button-color);
+  outline: 1px solid var(--button-color);
+  pointer-events: none;
 }
 
 .header__title {
@@ -77,10 +78,10 @@
 
 /* Общие стили для шапки и футера */
 .title {
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  line-height: 83%;
   color: var(--header-text-color);
   font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
   text-transform: lowercase;
 }
 
@@ -90,27 +91,26 @@
 }
 
 .header__rec {
-  color: var(--accent-color);
   position: absolute;
   visibility: var(--visible);
+  color: var(--accent-color);
   text-transform: uppercase;
-  inset-block-start: 11px;
-  inset-inline-end: 38px;
+  inset-block-start: calc(var(--main-padding) + 1px);
+  inset-inline-end: calc(var(--main-padding) + 28px);
 }
 
 .header__rec::after {
-  content: '';
+  content: "";
   position: absolute;
   visibility: var(--visible);
-  block-size: 9px;
-  inline-size: 9px;
   border: 1px solid var(--accent-color);
   border-radius: 50%;
-  background-color: var(--accent-color);
   box-shadow: 0 0 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
+  block-size: 9px;
+  inline-size: 9px;
   inset-block-start: 7px;
   inset-inline-end: -19px;
-
 }
 
 .title-decor {
@@ -118,13 +118,11 @@
 }
 
 /* Контент */
-
 .main {
   padding-inline: var(--main-padding);
 }
 
 /* Общие стили для секций */
-
 .section {
   display: grid;
   grid-auto-flow: row;
@@ -133,16 +131,14 @@
 }
 
 .section__title {
-  font-size: inherit;
   color: var(--section-title-color);
+  font-size: inherit;
 }
 .section__list {
   display: grid;
   gap: var(--card-gap);
 }
-.reasons__list-item {
 
-}
 .card {
   display: grid;
   gap: var(--header-card-gap);
@@ -150,9 +146,6 @@
 .card__title {
   color: var(--subtitle-color);
   font-size: inherit;
-}
-.card__text {
-
 }
 
 .card__link {
@@ -166,13 +159,11 @@
 }
 
 /* Начертание текста в секции "Как концентрироваться лучше..." */
-
 .title-weight {
   font-weight: var(--font-weight-normal);
 }
 
 /* Секция с картинками */
-
 .gallery {
   gap: var(--header-card-gap);
   margin-block-end: var(--main-margin);
@@ -184,15 +175,13 @@
 }
 
 .gallery__image {
-  inline-size: 100%;
-  block-size: 100%;
   object-fit: cover;
   object-position: center;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
-
 /* Футер */
-
 .footer {
   display: grid;
   justify-content: center;
@@ -204,7 +193,79 @@
 }
 
 /* Медиазапросы */
-
 @media (width >= 768px) {
-  
+  :root {
+  --main-padding: 20px;
+  --main-margin: 60px;
+  --section-margin: 80px;
+  }
+
+  .header {
+    margin-block-end: var(--main-margin);
+    padding: var(--main-padding);
+  }
+
+  .title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__title {
+    margin-inline-start: -20px;
+  }
+
+  .header__subtitle {
+    inline-size: 50%;
+    justify-self: flex-end;
+  }
+
+  .reasons, .recommendations {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .distractions__title {
+    inline-size: calc(100% / 3 - var(--header-card-gap));
+  }
+
+  .gallery {
+     --header-card-gap: 20px;
+  }
+
+  .gallery__title {
+    grid-column: 1 / -4;
+  }
+
+  .gallery__image:nth-child(2) {
+    grid-column: span 2;
+  }
+
+  .gallery__image:nth-child(3) {
+    grid-row: span 2;
+  }
+
+  .gallery__image:nth-child(4) {
+    grid-row: span 2;
+  }
+
+  .gallery__image:nth-child(6) {
+    grid-column: span 2;
+  }
+}
+
+@media (width >= 1024px) {
+  .reasons, .recommendations {
+    column-gap: 8px;
+  }
+
+  .distractions__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .header__theme-menu {
+    align-self: start;
+    justify-self: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
 }
