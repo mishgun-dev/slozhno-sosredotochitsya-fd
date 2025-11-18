@@ -15,3 +15,19 @@
   --bg-text-color: #ff8dcb;
   --visible: hidden;
 }
+
+/* Остальные стили, только при необходимости */
+
+@media (prefers-color-scheme: light) {
+  :root {
+  --bg-image: url(../images/cover-image-light.png);
+  --main-text-color: #353430;
+  --subtitle-color: #353430;
+  --button-color: #353430;
+  --header-text-color: #ffc2e6;
+  --section-title-color: #353430;
+  --accent-color: #ff8dcb;
+  --bg-text-color: #ff8dcb;
+  --visible: hidden;
+  }
+}
