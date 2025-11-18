@@ -1,11 +1,11 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-light {
+  /* Фоновое изображение светлой темы */
   --bg-image: url(../images/cover-image-light.png);
+
+  /* Видимость элемента REC */
+  --visible: hidden;
+
+  /* Цвета светлой темы */
   --main-text-color: #353430;
   --subtitle-color: #353430;
   --button-color: #353430;
@@ -14,15 +14,18 @@
   --accent-color: #ff8dcb;
   --bg-color: #fff1f7;
   --bg-text-color: #ff8dcb;
-  --visible: hidden;
-  --button-color-hover: rgb(50 49 45 / 0.4)
+  --button-color-hover: rgb(50 49 45 / 0.4);
 }
-
-/* Остальные стили, только при необходимости */
 
 @media (prefers-color-scheme: light) {
   :root {
+    /* Фоновое изображение светлой темы */
     --bg-image: url(../images/cover-image-light.png);
+
+      /* Видимость декоративного элемента REC */
+    --visible: hidden;
+
+    /* Цвета светлой темы */
     --main-text-color: #353430;
     --subtitle-color: #353430;
     --button-color: #353430;
@@ -31,7 +34,6 @@
     --accent-color: #ff8dcb;
     --bg-text-color: #ff8dcb;
     --bg-color: #fff1f7;
-    --visible: hidden;
-    --button-color-hover: rgb(50 49 45 / 0.4)
+    --button-color-hover: rgb(50 49 45 / 0.4);
   }
 }

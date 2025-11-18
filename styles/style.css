@@ -64,17 +64,21 @@
   color: var(--button-color);
   text-transform: lowercase;
   background: transparent;
+  transition: outline 0.3s ease;
   cursor: pointer;
 }
 
+/* Наведение на кнопку смены темы */
 .header__theme-menu-button:hover {
   outline: 1px solid var(--button-color-hover);
 }
 
+/* Сброс фокуса */
 .header__theme-menu-button:focus {
   outline: none;
 }
 
+/* Фокус с клавиатуры на кнопке смены темы */
 .header__theme-menu-button:focus-visible {
   border-block-end: 1px solid var(--button-color);
 }
@@ -102,6 +106,7 @@
   font-weight: var(--font-weight-bold);
 }
 
+/* Декоративный элемент REC */
 .header__rec {
   position: absolute;
   visibility: var(--visible);
@@ -111,6 +116,7 @@
   inset-inline-end: calc(var(--main-padding) + 28px);
 }
 
+/* Декоративный элемент: точка */
 .header__rec::after {
   content: "";
   position: absolute;
@@ -125,6 +131,7 @@
   inset-inline-end: -19px;
 }
 
+/* Фоновый цвет загловков */
 .title-decor {
   background-color: var(--bg-text-color);
 }
@@ -165,14 +172,17 @@
   text-shadow: 1px 1px var(--accent-color);
 }
 
+/* Наведение на ссылку */
 .card__link:hover {
   border-block-end: 1px solid var(--main-text-color);
 }
 
+/* Сброс фокуса */
 .card__link:focus {
   outline: none;
 }
 
+/* Фокус с клавиатуры на ссылке */
 .card__link:focus-visible {
   outline: 1px solid var(--main-text-color);
 }
@@ -238,8 +248,8 @@
   }
 
   .header__subtitle {
-    inline-size: 50%;
     justify-self: flex-end;
+    inline-size: 50%;
   }
 
   .reasons,
@@ -287,8 +297,8 @@
   }
 
   .header__theme-menu {
-    align-self: start;
     justify-self: center;
+    align-self: start;
   }
 
   .header__theme-menu-list {

@@ -1,23 +1,23 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
-
 :root {
+  /* Шрифт */
   --font: "IBM Plex Mono", monospace;
   --font-size: 18px;
   --line-height: 130%;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
+
+  /* Фоновое изображение */
   --bg-image: url(../images/cover-image-dark.png);
+
+  /* Видимость декоративного элемента REC */
   --visible: visible;
-  --card-gap: 20px;
-  --header-card-gap: 10px;
 
   /* Размеры */
-  --main-padding: 10px; /* 20px  */
-  --main-margin: 40px; /* 60px  */
-  --section-margin: 50px; /* 80px  */
+  --main-padding: 10px;
+  --main-margin: 40px;
+  --section-margin: 50px;
+  --card-gap: 20px;
+  --header-card-gap: 10px;
 
   /* Цвет */
   --main-text-color: #f1b2ce;

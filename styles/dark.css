@@ -1,12 +1,11 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-dark {
+  /* Фоновое изображение темной темы */
   --bg-image: url(../images/cover-image-dark.png);
+
+  /* Видимость декоративного элемента REC */
   --visible: visible;
+
+  /* Цвета темной темы */
   --main-text-color: #f1b2ce;
   --subtitle-color: #000028;
   --button-color: #ff0070;
@@ -14,5 +13,5 @@
   --section-title-color: #ff0070;
   --accent-color: #ff0070;
   --bg-text-color: #ff0070;
-  --button-color-hover: rgb(255 0 112 / 0.4)
+  --button-color-hover: rgb(255 0 112 / 0.4);
 }
