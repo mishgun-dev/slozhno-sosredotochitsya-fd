@@ -1,6 +1,6 @@
 :root {
   /* Шрифт */
-  --font: "IBM Plex Mono", monospace;
+  --font: 'IBM Plex mono', monospace;
   --font-size: 18px;
   --line-height: 130%;
   --font-weight-normal: 400;
