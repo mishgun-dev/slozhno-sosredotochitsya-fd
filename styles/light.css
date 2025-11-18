@@ -12,6 +12,7 @@
   --header-text-color: #ffc2e6;
   --section-title-color: #353430;
   --accent-color: #ff8dcb;
+  --bg-color: #fff1f7;
   --bg-text-color: #ff8dcb;
   --visible: hidden;
 }
@@ -28,6 +29,7 @@
   --section-title-color: #353430;
   --accent-color: #ff8dcb;
   --bg-text-color: #ff8dcb;
+  --bg-color: #fff1f7;
   --visible: hidden;
   }
 }
