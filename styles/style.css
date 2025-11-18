@@ -187,6 +187,11 @@
   outline: 1px solid var(--main-text-color);
 }
 
+.recommendations__column {
+  display: grid;
+  gap: var(--card-gap);
+}
+
 .recommendations__subtitle {
   color: var(--subtitle-color);
   font-size: inherit;
