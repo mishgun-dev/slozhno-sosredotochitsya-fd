@@ -67,6 +67,18 @@
   cursor: pointer;
 }
 
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--button-color-hover);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--button-color);
+}
+
 .header__theme-menu-button_active {
   outline: 1px solid var(--button-color);
   pointer-events: none;
@@ -150,7 +162,19 @@
 
 .card__link {
   text-decoration: none;
-  text-shadow: 2px 2px var(--accent-color);
+  text-shadow: 1px 1px var(--accent-color);
+}
+
+.card__link:hover {
+  border-block-end: 1px solid var(--main-text-color);
+}
+
+.card__link:focus {
+  outline: none;
+}
+
+.card__link:focus-visible {
+  outline: 1px solid var(--main-text-color);
 }
 
 .recommendations__subtitle {
@@ -195,9 +219,9 @@
 /* Медиазапросы */
 @media (width >= 768px) {
   :root {
-  --main-padding: 20px;
-  --main-margin: 60px;
-  --section-margin: 80px;
+    --main-padding: 20px;
+    --main-margin: 60px;
+    --section-margin: 80px;
   }
 
   .header {
@@ -218,7 +242,8 @@
     justify-self: flex-end;
   }
 
-  .reasons, .recommendations {
+  .reasons,
+  .recommendations {
     grid-template-columns: 1fr 2fr;
   }
 
@@ -227,11 +252,11 @@
   }
 
   .gallery {
-     --header-card-gap: 20px;
+    --header-card-gap: 20px;
   }
 
   .gallery__title {
-    grid-column: 1 / -4;
+    grid-column: 1 / 4;
   }
 
   .gallery__image:nth-child(2) {
@@ -252,7 +277,8 @@
 }
 
 @media (width >= 1024px) {
-  .reasons, .recommendations {
+  .reasons,
+  .recommendations {
     column-gap: 8px;
   }
 
