@@ -12,6 +12,7 @@
   --header-text-color: #ffc2e6;
   --section-title-color: #353430;
   --accent-color: #ff8dcb;
+  --decorated-zone-color: #353430;
   --bg-color: #fff1f7;
   --bg-text-color: #ff8dcb;
   --button-color-hover: rgb(50 49 45 / 0.4);
@@ -31,6 +32,7 @@
     --button-color: #353430;
     --header-text-color: #ffc2e6;
     --section-title-color: #353430;
+    --decorated-zone-color: #353430;
     --accent-color: #ff8dcb;
     --bg-text-color: #ff8dcb;
     --bg-color: #fff1f7;
